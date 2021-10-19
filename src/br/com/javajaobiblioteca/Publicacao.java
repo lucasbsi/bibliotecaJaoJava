@@ -50,6 +50,22 @@ public class Publicacao extends DomainObject {
 		this.area = area;
 	}
 	
+	public Integer obterNumExemplaresDisponiveis() {
+		return this.exemplaresRestantes();
+	}
+	
+	
+	public Integer obterNumExemplares() {
+		return this.numExemplares;
+	}
+	
+	public Integer exemplaresRestantes() {
+		return this.numExemplares - this.numExemplaresEmprestados;
+	}
+	
+	public void atualizarNumExemplares(Integer numExemplares) {
+		this.setNumExemplares(numExemplares);
+	}
 	
 	
 	

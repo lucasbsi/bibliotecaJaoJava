@@ -11,10 +11,10 @@ import java.util.Formatter;
 import java.time.format.DateTimeFormatter;
 
 public class Emprestimo extends DomainObject {
-	private Date inicio;
-	private Date previsaoEntrega;
+	private LocalDate inicio;
+	private LocalDate previsaoEntrega;
 	private Aluno aluno;
-	private Date entrega;
+	private LocalDate entrega;
 	private Publicacao publicacao;
 
 	
@@ -94,7 +94,8 @@ public class Emprestimo extends DomainObject {
 //				throw new RuntimeException("Erro para calcular datas");
 //			} 
 			
-			Long result = ChronoUnit.DAYS.between(dataEntregaLocalDate, atual);
+			
+			Long result = ChronoUnit.DAYS.between(this.previsaoEntrega, atual);
 			
 			return result;
 			
@@ -102,6 +103,7 @@ public class Emprestimo extends DomainObject {
 		
 		
 		}
+	}
 		
 		public Long obterDiasEmAtraso2() {
 			if ((this.entrega != null) && (this.aluno != null)) {
@@ -128,6 +130,8 @@ public class Emprestimo extends DomainObject {
 				LocalDate previsaoEntregaLocalDate = this.previsaoEntrega.toInstant()
 			      .atZone(null)
 			      .toLocalDate();
+				
+				
 				
 				Long result = ChronoUnit.DAYS.between(localDateNow, previsaoEntregaLocalDate);
 				

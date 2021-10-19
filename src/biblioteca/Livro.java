@@ -1,4 +1,4 @@
-package br.com.javajaobiblioteca;
+package biblioteca;
 
 import java.util.List;
 
@@ -36,6 +36,13 @@ public class Livro extends Publicacao {
 	public void removerAutor(Autor autor) {
 		this.autor.remove(autor);
 	}
-	
 
+	@Override
+	public String toString() {
+		return "Livro [ISBN=" + ISBN + ", autor=" + autor + ", getTitulo()=" + getTitulo() + ", getNumExemplares()="
+				+ getNumExemplares() + ", getNumExemplaresEmprestados()=" + getNumExemplaresEmprestados()
+				+ ", getArea()=" + getArea().getNome() + "]";
+	}
+	
+	
 }

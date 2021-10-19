@@ -1,4 +1,4 @@
-package br.com.javajaobiblioteca;
+package biblioteca;
 
 public class Area extends DomainObject {
 	private String nome;

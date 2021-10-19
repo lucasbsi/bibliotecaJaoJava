@@ -1,4 +1,4 @@
-package br.com.javajaobiblioteca;
+package biblioteca;
 
 public abstract class DomainObject {
 	private Long id;

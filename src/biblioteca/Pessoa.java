@@ -1,4 +1,4 @@
-package br.com.javajaobiblioteca;
+package biblioteca;
 
 public abstract class Pessoa extends DomainObject {
 	private String nome;

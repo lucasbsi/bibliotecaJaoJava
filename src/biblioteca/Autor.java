@@ -1,4 +1,4 @@
-package br.com.javajaobiblioteca;
+package biblioteca;
 
 //import java.util.List;
 

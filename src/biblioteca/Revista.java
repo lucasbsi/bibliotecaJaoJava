@@ -1,4 +1,4 @@
-package br.com.javajaobiblioteca;
+package biblioteca;
 
 public class Revista extends Publicacao {
 	private Integer periodicidadeEmDias;

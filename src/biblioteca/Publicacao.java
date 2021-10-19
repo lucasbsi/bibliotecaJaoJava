@@ -1,6 +1,6 @@
-package br.com.javajaobiblioteca;
-
-public abstract class Publicacao extends DomainObject {
+package biblioteca;
+//retirado o abstract pois preciso instanciar no contrutor do Emprestimo
+public class Publicacao extends DomainObject {
 	private String titulo;
 	private Integer numExemplares;
 	private Integer numExemplaresEmprestados;

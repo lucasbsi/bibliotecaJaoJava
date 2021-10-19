@@ -1,6 +1,6 @@
 package br.com.javajaobiblioteca;
 
-public class Publicacao extends DomainObject {
+public abstract class Publicacao extends DomainObject {
 	private String titulo;
 	private Integer numExemplares;
 	private Integer numExemplaresEmprestados;
